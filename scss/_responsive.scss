@@ -51,9 +51,6 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
-  .contact__list {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 @include media-xl {

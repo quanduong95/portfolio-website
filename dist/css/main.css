@@ -270,6 +270,18 @@
   grid-gap: 2rem;
   font-size: 1.5rem;
 }
+.contact__phone {
+  padding: 1rem;
+}
+.contact__phone p {
+  margin-top: 0.2rem;
+}
+.contact__email {
+  padding: 1rem;
+}
+.contact__email p {
+  margin-top: 0.2rem;
+}
 .contact .social-icons {
   position: initial;
   margin-top: 2rem;
@@ -314,9 +326,6 @@
 }
 @media screen and (min-width: 1024px) {
   .projects__items {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .contact__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
