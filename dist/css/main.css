@@ -1,4 +1,6 @@
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@
 }
 
 .home {
-  height: 100%;
+  height: 100vh;
   padding-top: 40vh;
   overflow: hidden;
   align-items: center;
@@ -24,6 +26,61 @@
 .home__name--last {
   color: #44d62c;
   font-weight: 700;
+}
+.home__swipe-btn {
+  margin-top: 2em;
+  font-size: 1.4rem;
+}
+.home__swipe-btn .btn {
+  display: inline-block;
+  color: #ffffff;
+  padding: 32px;
+  position: relative;
+  letter-spacing: 1px;
+}
+.home__swipe-btn .btn__circle, .home__swipe-btn .btn__text, .home__swipe-btn .btn__white-circle {
+  position: absolute;
+}
+.home__swipe-btn .btn__circle {
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 100%;
+  width: 100%;
+  box-shadow: 0 0 1px 1px #fff;
+  transition: 0.3s linear;
+}
+.home__swipe-btn .btn__white-circle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background: #44d62c;
+  display: flex;
+  transition: 0.3s ease-in-out;
+}
+.home__swipe-btn .btn__white-circle svg {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+.home__swipe-btn .btn__text {
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  padding: 24px 8px;
+  transition: 0.3s linear;
+}
+.home__swipe-btn .btn:hover .btn__circle {
+  transform: scale(0);
+}
+.home__swipe-btn .btn:hover .btn__white-circle {
+  transform: translate(-50%, -50%) scale(1);
+}
+.home__swipe-btn .btn:hover .btn__text {
+  transform: translate(40px, -50%);
 }
 
 .menu-btn {
@@ -114,7 +171,6 @@
 .nav .menu-nav__link {
   display: inline-block;
   font-size: 1.8rem;
-  text-transform: uppercase;
   padding: 0.6rem 0;
   font-weight: 400;
   transition: all 0.5s ease-in-out;
@@ -163,13 +219,6 @@
 }
 .about .jobs__job h6 {
   margin: 0.3rem 0;
-}
-.about .social-icons {
-  display: flex;
-  flex-direction: column;
-}
-.about footer {
-  transform: rotate(90deg) translate(-3.2rem, -5.2rem);
 }
 
 .projects {
@@ -241,13 +290,6 @@
 }
 .projects__btn:hover {
   color: #fff;
-}
-.projects .social-icons {
-  display: flex;
-  flex-direction: column;
-}
-.projects footer {
-  transform: rotate(90deg) translate(-3rem, -5rem);
 }
 
 .contact {
@@ -366,24 +408,91 @@ main {
   height: 100%;
   width: 100%;
 }
-main .social-icons {
+main .social-icons-wrapper {
   position: fixed;
-  bottom: 1rem;
+  bottom: 0.2rem;
   left: 1rem;
 }
-main .social-icons a {
-  padding: 0.4rem;
-  transition: all 0.5s ease-in-out;
+main .social-icons-wrapper .social-icons {
+  display: inline-flex;
+  list-style: none;
 }
-main .social-icons a:hover {
-  color: #44d62c;
+main .social-icons-wrapper .social-icons .social-icon {
+  position: relative;
+  background: #ffffff;
+  color: #272727;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+main .social-icons-wrapper .social-icons .social-icon .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+main .social-icons-wrapper .social-icons .social-icon .tooltip .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+main .social-icons-wrapper .social-icons .social-icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+main .social-icons-wrapper .social-icons .social-icon:hover span,
+main .social-icons-wrapper .social-icons .social-icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+main .social-icons-wrapper .social-icons .facebook:hover,
+main .social-icons-wrapper .social-icons .facebook:hover .tooltip,
+main .social-icons-wrapper .social-icons .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+main .social-icons-wrapper .social-icons .github:hover,
+main .social-icons-wrapper .social-icons .github:hover .tooltip,
+main .social-icons-wrapper .social-icons .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+main .social-icons-wrapper .social-icons .linkedin:hover,
+main .social-icons-wrapper .social-icons .linkedin:hover .tooltip,
+main .social-icons-wrapper .social-icons .linkedin:hover .tooltip::before {
+  background: #71b7f6;
+  color: #ffffff;
 }
 
 footer {
   color: #fff;
   font-size: 1rem;
   position: fixed;
-  bottom: 0.4rem;
+  bottom: 1.2rem;
   right: 1rem;
   text-align: right;
   padding: 1rem;
