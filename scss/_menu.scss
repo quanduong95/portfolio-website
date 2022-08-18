@@ -11,7 +11,7 @@
 
   &__burger {
     position: absolute;
-    right: 0;
+    right: 4px;
     top: 0.5rem;
     width: 28px;
     height: 3px;
@@ -59,9 +59,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  opacity: 0.98;
-  visibility: hidden;
-
+  transition: top 0.3s;
 
   &.open {
     visibility: visible;
@@ -73,7 +71,6 @@
     align-items: center;
     flex-flow: column wrap;
     height: 100vh;
-    text-transform: uppercase;
     overflow: hidden;
     background: $primary-color;
     list-style-type: none;

@@ -1,60 +1,114 @@
 .about {
-  padding-bottom: 2rem;
-
   &__bio-image {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    height: 50vh;
+    justify-content: start;
+    height: 100vh;
     width: 100%;
-    background: 
-    linear-gradient(
-      to right,
-      rgba($primary-color, 0.9),
-      rgba($secondary-color,0.1)
-    ), 
-    url('../img/model-1.jpg') center top;
-  background-size: cover;
+    
     p {
       margin-bottom: 1rem;
     }
   }
   
   &__bio {
-    width: 80%;
-    text-align: center;
+    width: 78%;
+    text-align: start;
     
-    .text-secondary {
-      padding-bottom: 1rem;
+    &-title {
+      margin-top: 4em;
+      color: $secondary-color;
+      font-weight: 800;
+    }
+
+    &-full-name {
+      margin-top: 1em;
+
+    }
+
+    &-job-title {
+      font-weight: 400;
+      margin: 0.6rem 0;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.4rem;
+    }
+    
+
+    p:last-child {
+      margin-bottom: 4em;
     }
   }
+  &__bio-education{
+    width: 78%;
+    
+    .timeline {
+      border-left: 8px solid $secondary-color;
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      color: #fff;
+      margin: 30px auto;
+      letter-spacing: 0.5px;
+      position: relative;
+      line-height: 1.4em;
+      padding: 20px;
+      list-style: none;
+      text-align: left;
   
-
-  .jobs {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-    width: 60vw;
-    margin: 2rem auto 0 auto;
-
-    &__job {
-      background:lighten($primary-color,10%);
-      padding: 0.5rem;
-      border-bottom: 5px solid $secondary-color;
-      
-
-      h2, h3 {
-        margin: 0.5rem 0;
+      h3 {
+        font-size: 1.4em;
       }
-
-      h6 {
-        margin: 0.3rem 0;
+  
+      .event {
+        border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        position: relative;
+  
+        &:last-of-type {
+          padding-bottom: 0;
+          margin-bottom: 0;
+          border: none;
+        }
+        
+        &:before,
+        &:after {
+            position: absolute;
+            display: block;
+            top: 0;
+        }
+        
+        &:before {
+          left: -177.5px;
+          color: #212121;
+          content: attr(data-date);
+          text-align: right;
+          /*  font-weight: 100;*/
+          
+          font-size: 16px;
+          min-width: 120px;
+        }
+        
+        &:after {
+          box-shadow: 0 0 0 8px $secondary-color;
+          left: -30px;
+          background: #212121;
+          border-radius: 50%;
+          height: 11px;
+          width: 11px;
+          content: "";
+          top: 5px;
+        }
       }
     }
   }
-  
-
-  
 }
+
+  
+
 

@@ -10,7 +10,9 @@ body {
   background: $primary-color;
   color: #fff;
   height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva,Verdana, sans-serif;
+  font-family: "Effra", Helvetica, sans-serif;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
   line-height: 1;
 }
 

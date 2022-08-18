@@ -1,91 +1,61 @@
-.projects {
-  padding-bottom: 2rem;
-
-  &__bio-image {
-    height: 30vh;
-    width: 100%;
-    background: 
-      linear-gradient(
-        to right,
-        rgba($primary-color, 0.9),
-        rgba($primary-color, 0.3)
-      ),
-      url('../img/model-1.jpg') center top;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-
-    .text-secondary {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-  }
-
-  &__items {
-    width: 60vw;
-    margin: 2rem auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
-
-  &__item {
-    position: relative;
-    border-bottom: 5px solid $secondary-color;
-    overflow: hidden;
-    cursor: pointer;
-
-    img {
-      width: 100%;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: $secondary-color;
-      opacity: 0;
-      @include transition-ease;
-    }
-
-    &:hover {
-      &::after {
-        top: 0;
-        opacity: 0.9;
-      }
-      .projects__btn {
-        opacity: 1;
-      }
-    }
-  }
-
-  &__btns {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    text-align: center;
-  }
-
-  &__btn {
-    opacity: 0;
-    color: set-text-color($secondary-color);
-    @include transition-ease;
-
-    &:hover {
-      color: set-text-color(set-text-color($secondary-color));
-    }
-  }
-
-  
-  
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #aabbfb;
 }
+
+main {
+  position: relative;
+
+  .title {
+    position: absolute;
+    font-weight: 800;
+    left: 4.6em;
+    top: -2em;
+    font-size: 2rem;
+    color: $secondary-color;
+  }
+
+  
+
+  .projects {
+    
+    --s: 140px; /* control the size */
+    --g: 10px;  /* control the gap */
+    display: grid;
+    margin: calc(var(--s) + var(--g));
+    
+    &> img {
+      grid-area: 1/1;
+      width: var(--s);
+      aspect-ratio: 1.15;
+      object-fit: cover;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
+      transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+      cursor: pointer;
+      filter: grayscale(45%);
+      transition: .2s linear;
+    }
+    & > img:hover {
+      filter: grayscale(0);
+      --_t: 1.2;
+    }
+    & > img:nth-child(1) {--_y: calc(-100% - var(--g))}
+    & > img:nth-child(7) {--_y: calc( 100% + var(--g))}
+    & > img:nth-child(3),
+    & > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
+    & > img:nth-child(4),
+    & > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
+    & > img:nth-child(3),
+    & > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
+    & > img:nth-child(5), 
+    & > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+  }
+}
+
+
+
+
+

@@ -1,7 +1,6 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +9,7 @@
   <title>Quan's Portfolio Website</title>
   <link rel="icon" href="./img/people.png">
 </head>
+
 <body>
   <header>
     <div class="menu-btn">
@@ -17,14 +17,14 @@
 
       </span>
     </div>
-    <nav class='nav'>
+    <nav id="navbar" class='nav'>
       <ul class="menu-nav">
         <li class="menu-nav__item ">
           <a href="index.html" class="menu-nav__link ">Home</a>
-        </li> 
+        </li>
         <li class="menu-nav__item active">
           <a href="about.html" class="menu-nav__link ">About</a>
-        </li>          
+        </li>
         <li class="menu-nav__item ">
           <a href="projects.html" class="menu-nav__link">Projects</a>
         </li>
@@ -39,28 +39,45 @@
     <section class="about">
       <div class="about__bio-image">
         <div class="about__bio">
-          <h2 class="text-secondary">Something about me</h2>
-          <p>Hello! I'm Quan, current undergraduate student at Sac State, CA. When I'm not working, I like to watch Youtube videos about new things around the world.</p>
+          <h2 class="about__bio-title">About me</h2>
+          <h2 class="about__bio-full-name">Quan Duong</h2>
+          <h4 class="about__bio-job-title">Student Web Developer</h4>
+          <p class = 'mt-2'>I’m known for being a detail-oriented, well-organized team player. I never miss deadlines, I’m a good
+            communicator and I can juggle multiple tasks at once. In my performance reviews, my supervisor always notes
+            that he appreciates my professionalism and enthusiasm for the job.
+          </p>
+          <p>
+            In my free time, I like spending it on learning new things from Youtube, yes I'm a visual learner. 
+          </p>
 
         </div>
-      </div>
-        <div class="jobs">
-          <div class="jobs__job">
-            <h2 class="text-secondary">2017-current</h2>
-            <h3>Netflix</h3>
-            <h6>Fullstack Developer</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugiat unde corrupti qui ab et esse maiores officiis aliquam expedita laudantium! Eveniet est veniam commodi officia ratione deleniti, quaerat suscipit.</p>
-          </div>
-          
-          
+        <div class="about__bio-education">
+            <h2 class="about__bio-education-title">Education</h2>
+            <ul class="timeline">
+              <li class="event">
+                <h3>(Sep 2015 - May 2017) South Puget Sound Community College, Olympia, Washington US</h3>
+              </li>
+              <li class="event mt-2">
+                <h3>(Sep 2017 - May 2018) Moraine Valley Community College, Palos Hills, Illinois US</h3>
+              </li>
+              <li class="event mt-2">
+                <h3>(Sep 2018 - Dec 2020) American River College, Sacramento, California US</h3>
+
+              </li>
+              <li class="event mt-2">
+                <h3>(Jan 2021 - Dec 2023) California State University - Sacramento, Sacramento, California US</h3>
+              </li>
+            </ul>
         </div>
-      </div>
-      
-      
     </section>
-  
+    </div>
+
+
+    </section>
+
   </main>
   <script src="https://kit.fontawesome.com/efb8d7d14e.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -6,11 +6,22 @@ const navItems = document.querySelectorAll('.menu-nav__item');
 
 
 
+let lastScrollTop;
+navbar = document.getElementById('navbar');
+window.addEventListener('scroll',function(){
+let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+if(scrollTop > lastScrollTop){
+navbar.style.top='-100px';
+}
+else{
+navbar.style.top='0';
+}
+lastScrollTop = scrollTop;
+});
+
 
 let showMenu = false;
 menuBtn.addEventListener('click', toggleMenu);
-
-
 
 function toggleMenu() {
   if (!showMenu) {

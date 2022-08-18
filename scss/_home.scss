@@ -4,13 +4,6 @@
   overflow: hidden;
   align-items: center;
   text-align: center;
-  background: 
-    linear-gradient(
-      to right,
-      rgba($primary-color, 0.9),
-      rgba($secondary-color,0.1)
-    ), 
-    url('../dist/img/pexels-pixabay-270373.jpg') center top;
 
   &__name {
     font-size: 5rem;
