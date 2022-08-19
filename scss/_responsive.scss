@@ -46,27 +46,24 @@
     padding: 5px;
     font-size: 16px
   }
-  #projects {
-    --s: 220px; /* control the size */
-    --g: 20px;  /* control the gap */
 
-  }
+  #projects  {
+    width: 75%;
+    margin: 8em auto;
+    
+    
 
-  #projects-title {
-    left: -2em;
-    top: 0;
 
-  }
 
-  #projects-line {
-    position: absolute;
-    top: 8em;
-    bottom: 0;
-    left: -3em;
-    height: 60vh;
-    border: 1px solid #fff;
-  }
-  
+
+      &-details {
+        float:left;
+      }
+    }
+
+
+
+
   #contact-list {
     flex-direction: row;
 
@@ -83,26 +80,10 @@
     margin: 2em;
   }
 
-  #projects {
-    --s: 220px; /* control the size */
-    --g: 20px;  /* control the gap */
-
+  #projects { 
+    width: 65%;
+    margin: 8em auto;
   }
-
-  #projects-title {
-    left: -4.8em;
-    top: 2.6em;
-
-  }
-  #projects-line {
-    position: absolute;
-    top: 10em;
-    bottom: 0;
-    left: -5em;
-    height: 60vh;
-    border: 1px solid #fff;
-  }
-
   #contact-list {
     flex-direction: row;
 
@@ -110,28 +91,24 @@
       margin: 0 1em;
     }
   }
+
 }
 
 @include media-xl {
-  #projects {
-    --s: 220px; /* control the size */
-    --g: 20px;  /* control the gap */
 
+  #projects { 
+    width: 50%;
+    margin: 8em auto;
   }
+  #contact-list {
+    flex-direction: row;
 
-  #projects-title {
-    left: -4.8em;
-    top: 2.6em;
+    .contact__list-email-wrapper {
+      margin: 0 1em;
+    }
+  }
+  
 
-  }
-  #projects-line {
-    position: absolute;
-    top: 10em;
-    bottom: 0;
-    left: -5em;
-    height: 60vh;
-    border: 1px solid #fff;
-  }
 
   #contact-list {
     flex-direction: row;
@@ -150,4 +127,5 @@
       }
     }
   }
+
 }

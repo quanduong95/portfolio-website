@@ -1,9 +1,8 @@
 .contact {
   height: 100%;
   overflow: hidden;
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  align-items: center;
 
   &__title {
     margin-bottom: 1.8rem;
