@@ -18,41 +18,13 @@ main {
     color: $secondary-color;
   }
 
-  
-
-  .projects {
-    
-    --s: 140px; /* control the size */
-    --g: 10px;  /* control the gap */
-    display: grid;
-    margin: calc(var(--s) + var(--g));
-    
-    &> img {
-      grid-area: 1/1;
-      width: var(--s);
-      aspect-ratio: 1.15;
-      object-fit: cover;
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
-      transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
-      cursor: pointer;
-      filter: grayscale(45%);
-      transition: .2s linear;
-    }
-    & > img:hover {
-      filter: grayscale(0);
-      --_t: 1.2;
-    }
-    & > img:nth-child(1) {--_y: calc(-100% - var(--g))}
-    & > img:nth-child(7) {--_y: calc( 100% + var(--g))}
-    & > img:nth-child(3),
-    & > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
-    & > img:nth-child(4),
-    & > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
-    & > img:nth-child(3),
-    & > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
-    & > img:nth-child(5), 
-    & > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+  .projects-wrapper {
+    width: 75%;
+    height: 100%;
+    border: 1px solid red;
   }
+
+  
 }
 
 

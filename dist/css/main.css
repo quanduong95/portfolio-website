@@ -240,7 +240,7 @@
 }
 .about__bio-education .timeline .event {
   border-bottom: 1px solid rgba(160, 160, 160, 0.2);
-  padding-bottom: 15px;
+  padding-bottom: 100px;
   margin-bottom: 20px;
   position: relative;
 }
@@ -293,46 +293,10 @@ main .title {
   font-size: 2rem;
   color: #44d62c;
 }
-main .projects {
-  --s: 140px; /* control the size */
-  --g: 10px; /* control the gap */
-  display: grid;
-  margin: calc(var(--s) + var(--g));
-}
-main .projects > img {
-  grid-area: 1/1;
-  width: var(--s);
-  aspect-ratio: 1.15;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-          clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-  transform: translate(var(--_x, 0), var(--_y, 0)) scale(var(--_t, 1));
-  cursor: pointer;
-  filter: grayscale(45%);
-  transition: 0.2s linear;
-}
-main .projects > img:hover {
-  filter: grayscale(0);
-  --_t: 1.2;
-}
-main .projects > img:nth-child(1) {
-  --_y: calc(-100% - var(--g));
-}
-main .projects > img:nth-child(7) {
-  --_y: calc( 100% + var(--g));
-}
-main .projects > img:nth-child(3), main .projects > img:nth-child(5) {
-  --_x: calc(-75% - .87*var(--g));
-}
-main .projects > img:nth-child(4), main .projects > img:nth-child(6) {
-  --_x: calc( 75% + .87*var(--g));
-}
-main .projects > img:nth-child(3), main .projects > img:nth-child(4) {
-  --_y: calc(-50% - .5*var(--g));
-}
-main .projects > img:nth-child(5), main .projects > img:nth-child(6) {
-  --_y: calc( 50% + .5*var(--g));
+main .projects-wrapper {
+  width: 75%;
+  height: 100%;
+  border: 1px solid red;
 }
 
 .contact {
