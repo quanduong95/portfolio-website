@@ -4,11 +4,27 @@ body {
 }
 
 main {
+  text-align: center;
+  .title {
+    margin: 3.4em auto auto auto;
+    width: 90%;
+    font-size: 2rem;
 
+    h2 {
+      color: $secondary-color;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 1em auto;
+      font-size: 1rem;
+
+    }
+  }
 
   .projects-list-wrapper {
     width: 90%;
-    margin: 4em auto;
+    margin: 0 auto;
     text-align: center;
     
     .projects-list__item {

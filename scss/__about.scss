@@ -14,10 +14,11 @@
   
   &__bio {
     width: 78%;
-    text-align: start;
+    text-align: center;
     
     &-title {
-      margin-top: 4em;
+      margin-top: 2em;
+      font-size: 3rem;
       color: $secondary-color;
       font-weight: 800;
     }
@@ -28,13 +29,13 @@
     }
 
     &-job-title {
-      font-weight: 400;
+      font-weight: 500;
       margin: 0.6rem 0;
     }
 
     p {
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.4rem;
     }
     

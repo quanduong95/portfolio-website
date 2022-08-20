@@ -1,8 +1,8 @@
 .home {
   height: 100vh;
-  padding-top: 40vh;
   overflow: hidden;
-  align-items: center;
+  @include flex-center;
+  flex-direction: column;
   text-align: center;
 
   &__name {

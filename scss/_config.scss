@@ -3,6 +3,28 @@ $secondary-color:#44d62c;
 $contact-color: #a4f397;
 $project-color: #8ef080;
 
+$color-black: hsl(0, 0%, 5%);
+$color-color: hsl(0, 0%, 100%);
+
+$color-html: hsl(15, 100%, 60%);
+$color-css: hsl(200, 100%, 60%);
+$color-scss: hsl(300, 100%, 60%);
+$color-js: hsl(60, 100%, 60%);
+$color-ts: hsl(220, 100%, 60%);
+$color-node: hsl(110, 100%, 60%);
+$color-react: hsl(180, 100%, 60%);
+$color-python: hsl(0, 93%, 58%);
+
+$percent-html: 80;
+$percent-css: 75;
+$percent-scss: 50;
+$percent-js: 65;
+$percent-ts: 50;
+$percent-node: 45;
+$percent-react: 45;
+$percent-python: 50;
+
+
 *,
 *:before,
 *:after {
@@ -11,6 +33,9 @@ $project-color: #8ef080;
   padding: 0;
 }
 
+.text-shadow {
+  text-shadow: 0.5px 0.5px 0.5px rgb(73, 72, 72);
+}
 
 .mt-2 {
   margin-top: 2em;
@@ -26,6 +51,24 @@ $project-color: #8ef080;
   transition: all 0.5s ease-in-out;
 }
 
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
 @function set-text-color($color) {
   @if (lightness($color) > 40%) {
     @return #000;
@@ -34,23 +77,55 @@ $project-color: #8ef080;
   }
 }
 
-@mixin media-md {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
-}
-@mixin media-lg {
-  @media screen and (min-width: 1024px) {
-    @content;
-  }
-}
-@mixin media-xl {
-  @media screen and (min-width: 1600px) {
-    @content;
-  }
+@function strokeDashoffset($num) {
+	@return 440 - (440 * $num) / 100;
 }
 
 
-.text-shadow {
-  text-shadow: 0.5px 0.5px 0.5px rgb(73, 72, 72);
+@keyframes anim_circle-html {
+	to {
+		stroke-dashoffset: strokeDashoffset($percent-html);
+	}
 }
+
+@keyframes anim_circle-css {
+	to {
+		stroke-dashoffset: strokeDashoffset($percent-css);
+	}
+}
+
+@keyframes anim_circle-scss {
+	to {
+		stroke-dashoffset: strokeDashoffset($percent-scss);
+	}
+}
+
+@keyframes anim_circle-js {
+	to {
+		stroke-dashoffset: strokeDashoffset($percent-js);
+	}
+}
+
+@keyframes anim_circle-ts {
+	to {
+		stroke-dashoffset: strokeDashoffset($percent-ts);
+	}
+}
+
+@keyframes anim_circle-node {
+	to {
+		stroke-dashoffset: strokeDashoffset($percent-node);
+	}
+}
+
+@keyframes anim_circle-react {
+	to {
+		stroke-dashoffset: strokeDashoffset($percent-react);
+	}
+}
+@keyframes anim_circle-python {
+	to {
+		stroke-dashoffset: strokeDashoffset($percent-python);
+	}
+}
+
