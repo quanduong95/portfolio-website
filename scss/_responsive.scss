@@ -23,19 +23,31 @@
       &__link {
         font-size: 1.5rem;
         padding: 0.6rem 0; 
-
       }
     }
   }
 
-  .about__bio {
-    font-size: 1.5rem;
 
+  .about__bio {
+    position: relative;
+    width: 78%;
+    text-align: center;
+    
     &-title {
-      @include transition-ease;
+      position: absolute;
+      top: 20%;
+      left: -50%;
+      font-size: 3rem;
+      color: $secondary-color;
+      font-weight: 800;
+      animation: left-to-right 1.5s ease-in-out forwards;
+
+    }
+
+    &-full-name {
+      margin-top: 5.5em;
     }
   }
-
   .timeline .event::before {
     left: 0.5px;
     top: 20px;
@@ -55,10 +67,18 @@
 
 
   .skills {
-    &__title {
-      margin-top: 2.2em;
-      @include transition-ease;
+    position: relative;
+    background-color: $primary-color;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    
+    &__title { 
+      top: -6%;
+    }
 
+    &__greeting {
+      padding-top: 1em;
     }
 
     &__stacks {
@@ -67,14 +87,19 @@
     
   }
 
-  #projects-title {
-    width: 75%;
-    margin-top: 3.2em;
-    font-size: 1.8rem;
-    @include transition-ease;
+    
+    
 
+  .projects-title-wrapper {
+    margin-top: 8em;
 
-    p {
+    #projects-title  {
+      top: -6%;
+      left: -50%;
+      
+    }
+    .projects-title-text {
+      width: 90%;
       font-size: 1rem;
     }
   }
@@ -83,11 +108,8 @@
   #projects  {
     width: 75%;
     margin: 0 auto;
-    
+    margin-top: 5em;
     }
-
-
-
 
   #contact-list {
     flex-direction: row;
@@ -98,6 +120,10 @@
   }
 
   
+footer {
+  display: block;
+}
+
 }
 
 @include media-lg {
@@ -113,11 +139,36 @@
     }
   }
 
-  .skills {
-    &__title {
-      margin-top: 2.2em;
-      @include transition-ease;
+  .about__bio {
+    position: relative;
+    width: 78%;
+    text-align: center;
+    
+    &-title {
+      position: absolute;
+      top: 20%;
+      left: -50%;
+      font-size: 3rem;
+      color: $secondary-color;
+      font-weight: 800;
+      animation: left-to-right 1.5s ease-in-out forwards;
 
+    }
+
+    &-full-name {
+      margin-top: 5.5em;
+    }
+  }
+
+  .skills {
+    &__title { 
+      top: -10%;
+      left: -50%;
+      animation: left-to-right 1.5s ease-in-out forwards;
+    }
+
+    &__greeting {
+      margin-top: 10em;
     }
 
     &__stacks {
@@ -132,21 +183,25 @@
     }  
   }
 
-  #projects-title {
-    font-size: 1.8rem;
-    @include transition-ease;
-    width: 65%;
-    margin-top: 3em;
+  .projects-title-wrapper {
+    margin-top: 8em;
+
+    #projects-title  {
+      top: -10%;
+      left: -50%;
+    }
 
     p {
+      width: 90%;
+      margin: 1em auto 2em auto;
       font-size: 1rem;
     }
-  }
+  }  
 
   #projects { 
     width: 65%;
     margin: 0 auto;
-    margin-top: 3.4em;
+    margin-top: 2em;
   }
   #contact-list {
     flex-direction: row;
@@ -154,6 +209,9 @@
     .contact__list-email-wrapper {
       margin: 0 1em;
     }
+  }
+  footer {
+    display: block;
   }
 
 }
@@ -171,6 +229,28 @@
     }
   }
 
+
+  .about__bio {
+    position: relative;
+    width: 78%;
+    text-align: center;
+    
+    &-title {
+      position: absolute;
+      top: 20%;
+      left: -50%;
+      font-size: 3rem;
+      color: $secondary-color;
+      font-weight: 800;
+      animation: left-to-right 1.5s ease-in-out forwards;
+
+    }
+
+    &-full-name {
+      margin-top: 5.5em;
+    }
+  }
+
   .about__bio-image {
     .about__bio {
       width: 50%;
@@ -182,11 +262,6 @@
 
 
   .skills {
-    &__title {
-      margin-top: 2.2em;
-      @include transition-ease;
-
-    }
 
     &__stacks {
       padding-left: 14em;
@@ -200,20 +275,25 @@
     }  
   }
 
-  #projects-title {
-    width: 50%;
-    margin-top: 3.6em;
-    margin-bottom: 2em;
-    @include transition-ease;
+  .projects-title-wrapper {
+    margin-top: 8em;
 
-    p {
-      font-size: 1rem;
-      margin-top: 1em;
+    #projects-title  {
+      top: -6%;
+      left: -50%;
+      
+  
     }
-  }
+    p {
+      width: 90%;
+      margin: 1em auto 2em auto;
+      font-size: 1rem;
+    }
+  }  
   #projects { 
     width: 50%;
     margin: 0 auto;
+    margin-top: 1em;
   }
   #contact-list {
     flex-direction: row;

@@ -46,7 +46,7 @@ main {
   .social-icons-wrapper {
     position: fixed;
     bottom: 0.2rem;
-    left: 1rem;
+    @include transition-ease;
 
     .social-icons {
       display: inline-flex;
@@ -133,14 +133,4 @@ main {
     }
 
   }
-}
-
-footer {
-  color: set-text-color($primary-color);
-  font-size: 1rem;
-  position: fixed;
-  bottom: 1.2rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
 }

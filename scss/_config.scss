@@ -48,7 +48,7 @@ $percent-python: 50;
 }
 
 @mixin transition-ease {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in;
 }
 
 @mixin media-md {
@@ -129,3 +129,23 @@ $percent-python: 50;
 	}
 }
 
+@keyframes left-to-right{
+	to {
+		transition: 1s;
+    transform: translateX(50%);
+	}
+}
+
+@keyframes right-to-left {
+	to {
+		transition: 1s;
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes nav-right-to-left {
+	to {
+		transition: 1s;
+		transform: translateX(-95%);
+	}
+}

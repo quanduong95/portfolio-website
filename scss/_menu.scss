@@ -57,9 +57,9 @@
 .nav {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
   width: 100vw;
-  transition: top 0.3s;
+  animation: nav-right-to-left 1s ease-in forwards;
 
   &.open {
     visibility: visible;
@@ -75,7 +75,6 @@
     background: $primary-color;
     list-style-type: none;
     transform: translateY(-100%);
-    @include transition-ease;
 
     &.open {
       transform: translateY(0);
@@ -84,7 +83,7 @@
 
     &__item {
       transform: translateY(100vw);
-      @include transition-ease;
+
       
       &.open {
         transform: translateY(0);
