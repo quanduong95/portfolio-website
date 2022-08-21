@@ -370,6 +370,7 @@ main .title {
   margin: 2.4em auto 1em auto;
   width: 90%;
   font-size: 2rem;
+  transition: all 0.5s ease-in-out;
 }
 main .title h2 {
   color: #44d62c;
@@ -548,7 +549,6 @@ main .projects-list-wrapper .projects-list__item-link:hover .projects-list-item-
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   width: 85%;
   margin: 0 auto;
 }
@@ -705,7 +705,7 @@ main .projects-list-wrapper .projects-list__item-link:hover .projects-list-item-
   }
   #projects-title {
     width: 75%;
-    margin-top: 5.2em;
+    margin-top: 3.2em;
     font-size: 1.8rem;
     transition: all 0.5s ease-in-out;
   }
